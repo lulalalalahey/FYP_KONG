@@ -1,0 +1,31 @@
+name: Fabric-8Peers
+version: "2.0.0"
+caliper:
+  blockchain: 'fabric'
+channels:
+  - channelName: mychannel
+    contracts:
+      - id: ev-cc
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: 'User1'
+          clientPrivateKey:
+            path: '../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/07ddab6f540ab6daca7ec49c16b34aa202d873ef4708826f6fbe03e860cc2092_sk'
+          clientSignedCert:
+            path: '../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem'
+    connectionProfile:
+      path: '../test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml'
+      discover: true
+  - mspid: Org2MSP
+    identities:
+      certificates:
+        - name: 'User1'
+          clientPrivateKey:
+            path: '../test-network/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore/cf8837bab7d31afff0368364c3c2dc321cb427f123062b3c3fa9bd3275bb7efa_sk'
+          clientSignedCert:
+            path: '../test-network/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/signcerts/cert.pem'
+    connectionProfile:
+      path: '../test-network/organizations/peerOrganizations/org2.example.com/connection-org2.yaml'
+      discover: true

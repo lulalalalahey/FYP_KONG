@@ -1,0 +1,33 @@
+=== After 2 peers test ===
+CONTAINER ID   NAME                                                                                                    CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O         PIDS
+586ec9679566   dev-peer0.org1.example.com-ev-cc_1.0-8285b96a03ce6b627cb148ba35bf8a1e5e22967d7ba45016d66b495bf2e6c068   0.00%     22.26MiB / 1.89GiB   1.15%     3.81kB / 3.54kB   14.9MB / 0B       7
+363e5df1f5ae   dev-peer0.org2.example.com-ev-cc_1.0-8285b96a03ce6b627cb148ba35bf8a1e5e22967d7ba45016d66b495bf2e6c068   0.00%     8.102MiB / 1.89GiB   0.42%     3.9kB / 3.7kB     111kB / 0B        7
+9d793932502c   peer0.org2.example.com                                                                                  2.36%     166.2MiB / 1.89GiB   8.59%     3.26MB / 171kB    13.8MB / 4.97MB   9
+bc6bd4643027   orderer.example.com                                                                                     0.08%     35.73MiB / 1.89GiB   1.85%     78.7kB / 252kB    42.4MB / 1.68MB   10
+dd41f6012dac   peer0.org1.example.com                                                                                  2.27%     158.5MiB / 1.89GiB   8.19%     3.26MB / 172kB    24.4MB / 3.61MB   10
+5bcea171a8f2   ca_org2                                                                                                 0.00%     3.605MiB / 1.89GiB   0.19%     28.1kB / 43.8kB   6.98MB / 7.57MB   9
+d52021430a01   ca_org1                                                                                                 0.00%     2.215MiB / 1.89GiB   0.11%     30.5kB / 49.8kB   2.45MB / 9.52MB   8
+8fa874cf0470   ca_orderer                                                                                              0.00%     2.758MiB / 1.89GiB   0.14%     51.2kB / 84.4kB   4.19MB / 9.6MB    9
+
+=== After 4 peers test ===
+CONTAINER ID   NAME                                                                                                    CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O         PIDS
+2784234664bd   dev-peer0.org2.example.com-ev-cc_1.0-8285b96a03ce6b627cb148ba35bf8a1e5e22967d7ba45016d66b495bf2e6c068   0.00%     5.535MiB / 1.89GiB   0.29%     3.87kB / 3.54kB   0B / 0B           7
+c098c142b470   dev-peer0.org1.example.com-ev-cc_1.0-8285b96a03ce6b627cb148ba35bf8a1e5e22967d7ba45016d66b495bf2e6c068   0.00%     8.293MiB / 1.89GiB   0.43%     3.74kB / 3.61kB   77.8kB / 0B       8
+e22c3d68c407   peer0.org2.example.com                                                                                  2.26%     149MiB / 1.89GiB     7.70%     3.26MB / 172kB    2.7MB / 3.5MB     9
+ecc4e9368aaa   orderer.example.com                                                                                     0.06%     38.16MiB / 1.89GiB   1.97%     79kB / 252kB      22.9MB / 262kB    9
+0a8647c8e049   peer0.org1.example.com                                                                                  2.37%     153.8MiB / 1.89GiB   7.95%     3.27MB / 175kB    11.4MB / 4.8MB    9
+959476157f68   ca_org1                                                                                                 0.00%     14.32MiB / 1.89GiB   0.74%     30.4kB / 49.7kB   3.04MB / 737kB    9
+b9f1785b4529   ca_orderer                                                                                              0.00%     15.68MiB / 1.89GiB   0.81%     51.1kB / 84.3kB   9.04MB / 1.05MB   10
+c7a0634d1212   ca_org2                                                                                                 0.00%     14.86MiB / 1.89GiB   0.77%     27.9kB / 43.8kB   135kB / 737kB     9
+
+=== After 6 peers test ===
+CONTAINER ID   NAME                                                                                                    CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O         PIDS
+4d5a284c8c63   dev-peer0.org1.example.com-ev-cc_1.0-8285b96a03ce6b627cb148ba35bf8a1e5e22967d7ba45016d66b495bf2e6c068   0.00%     9.75MiB / 1.89GiB    0.50%     3.96kB / 3.61kB   4.58MB / 0B       7
+a0b32b24530b   dev-peer0.org2.example.com-ev-cc_1.0-8285b96a03ce6b627cb148ba35bf8a1e5e22967d7ba45016d66b495bf2e6c068   0.00%     5.508MiB / 1.89GiB   0.28%     3.74kB / 3.52kB   0B / 0B           7
+3163fd5f587d   orderer.example.com                                                                                     0.11%     30.07MiB / 1.89GiB   1.55%     78.7kB / 252kB    18.2MB / 3.78MB   9
+a350f44c792c   peer0.org2.example.com                                                                                  2.00%     148.3MiB / 1.89GiB   7.67%     3.27MB / 174kB    12.6MB / 6.3MB    10
+179d7a10dbe7   peer0.org1.example.com                                                                                  2.27%     112.5MiB / 1.89GiB   5.81%     3.26MB / 174kB    26.6MB / 39.1MB   10
+0afe7c52e2cc   ca_orderer                                                                                              0.00%     2.023MiB / 1.89GiB   0.10%     51.1kB / 84.4kB   2.58MB / 10.2MB   9
+b2106ec31233   ca_org2                                                                                                 0.00%     7.926MiB / 1.89GiB   0.41%     28.3kB / 43.8kB   5.92MB / 9.85MB   9
+faece89b0927   ca_org1                                                                                                 0.00%     2.301MiB / 1.89GiB   0.12%     30.6kB / 49.7kB   3.81MB / 9.56MB   9
+

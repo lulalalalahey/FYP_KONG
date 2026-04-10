@@ -1,0 +1,7 @@
+=== System Information ===
+Date: Mon Jan 26 08:54:46 AM EST 2026
+CPU Cores: 4
+Memory: Mem:           1.9Gi       876Mi       474Mi       684Ki       742Mi       1.0Gi
+Disk: Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        79G   22G   53G  30% /
+

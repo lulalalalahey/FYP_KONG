@@ -1,0 +1,19 @@
+test:
+  name: ev-charging-benchmark
+  description: EV charging performance test
+  workers:
+    type: local
+    number: 30
+  rounds:
+    - label: record_charging
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: workload.js
+        arguments:
+          contractId: ev-cc
+          shardCount: 2
+          payloadSize: 100  # 4KB=4096, 16KB=16384, 64KB=65536, 128KB=131072, 192KB=196608

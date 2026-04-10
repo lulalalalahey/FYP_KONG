@@ -1,0 +1,42 @@
+test:
+  name: EV-Charging-Scalability-Test
+  description: Performance test with varying peer counts
+  workers:
+    type: local
+    number: 2
+  rounds:
+    - label: warmup
+      description: Warmup phase
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 20
+      workload:
+        module: ../workload.js
+        arguments:
+          contractId: ev-cc
+    
+    - label: sustained_load
+      description: Sustained load test
+      txDuration: 60
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ../workload.js
+        arguments:
+          contractId: ev-cc
+    
+    - label: peak_load
+      description: Peak load test
+      txDuration: 30
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+      workload:
+        module: ../workload.js
+        arguments:
+          contractId: ev-cc

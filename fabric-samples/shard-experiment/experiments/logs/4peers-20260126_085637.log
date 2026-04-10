@@ -1,0 +1,36 @@
+2026.01.26-09:00:09.032[32m info [39m [caliper] [cli-launch-manager] 	Set workspace path: /home/kali/fabric-dev/fabric-samples/shard-experiment
+2026.01.26-09:00:09.033[32m info [39m [caliper] [cli-launch-manager] 	Set benchmark configuration path: /home/kali/fabric-dev/fabric-samples/shard-experiment/experiments/configs/benchmark-unified.yaml
+2026.01.26-09:00:09.033[32m info [39m [caliper] [cli-launch-manager] 	Set network configuration path: /home/kali/fabric-dev/fabric-samples/shard-experiment/experiments/network-configs/network-4peers.yaml
+2026.01.26-09:00:09.033[32m info [39m [caliper] [cli-launch-manager] 	Set SUT type: fabric
+2026.01.26-09:00:09.039[32m info [39m [caliper] [benchmark-validator] 	No observer specified, will default to `none`
+2026.01.26-09:00:09.040[32m info [39m [caliper] [caliper-engine] 	Starting benchmark flow
+2026.01.26-09:00:09.040[32m info [39m [caliper] [caliper-engine] 	Skipping start commands due to benchmark flow conditioning
+2026.01.26-09:00:09.040[32m info [39m [caliper] [caliper-engine] 	Skipping initialization phase due to benchmark flow conditioning
+2026.01.26-09:00:09.040[32m info [39m [caliper] [caliper-engine] 	Skipping install smart contract phase due to benchmark flow conditioning
+2026.01.26-09:00:09.434[32m info [39m [caliper] [FabricConnectorFactory] 	Initializing gateway connector compatible with installed SDK: 2.2.20
+2026.01.26-09:00:09.454[31m error[39m [caliper] [caliper-engine] 	Error while performing "test" step: Error: path property /home/kali/fabric-dev/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/07ddab6f540ab6daca7ec49c16b34aa202d873ef4708826f6fbe03e860cc2092_sk does not point to a file that exists for clientPrivateKey for name User1 in organization Org1MSP
+    at IdentityManager._extractPEMFromPath (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/identity-management/IdentityManager.js:308:23)
+    at async IdentityManager._extractPEMFromPathOrPEMDefinition (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/identity-management/IdentityManager.js:280:19)
+    at async IdentityManager._extractIdentitiesFromCertificateAndPrivateKeyArray (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/identity-management/IdentityManager.js:259:32)
+    at async IdentityManager._parseOrganizations (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/identity-management/IdentityManager.js:187:25)
+    at async IdentityManager.initialize (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/identity-management/IdentityManager.js:44:9)
+    at async IdentityManagerFactory.create (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/identity-management/IdentityManagerFactory.js:33:9)
+    at async ConnectorConfiguration.parseConfiguration (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/connector-configuration/ConnectorConfiguration.js:53:32)
+    at async ConnectorConfigurationFactory.create (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/connector-configuration/ConnectorConfigurationFactory.js:34:9)
+    at async CaliperEngine.connectorFactory [as adapterFactory] (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-fabric/lib/FabricConnectorFactory.js:135:36)
+    at async CaliperEngine.run (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-core/lib/manager/caliper-engine.js:149:53)
+2026.01.26-09:00:09.454[32m info [39m [caliper] [caliper-engine] 	Skipping end command due to benchmark flow conditioning
+2026.01.26-09:00:09.455[31m error[39m [caliper] [cli-launch-manager] 	Benchmark failed with error code 6
+Usage:
+ caliper launch manager --caliper-bind-sut fabric:2.2 [other options]
+
+Options:
+  --help, -h           Show usage information  [boolean]
+  --version            Show version information  [boolean]
+  --caliper-bind-sut   The name and version of the platform to bind to  [string]
+  --caliper-bind-cwd   The working directory for performing the SDK install  [string]
+  --caliper-bind-args  Additional arguments to pass to "npm install". Use the "=" notation when setting this parameter  [string]
+  --caliper-bind-file  Yaml file to override default (supported) package versions when binding an SDK  [string]
+
+Error: Benchmark failed with error code 6
+    at LaunchManager.handler (/home/kali/fabric-dev/fabric-samples/shard-experiment/node_modules/@hyperledger/caliper-cli/lib/launch/lib/launchManager.js:70:23)

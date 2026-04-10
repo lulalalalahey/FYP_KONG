@@ -1,0 +1,9 @@
+=== System Information ===
+Date: Mon Jan 26 08:56:37 AM EST 2026
+CPU Cores: 4
+Memory: Mem:           1.9Gi       670Mi       598Mi       692Ki       824Mi       1.2Gi
+Disk: Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        79G   22G   53G  30% /
+Network Dir: /home/kali/fabric-dev/fabric-samples/test-network
+Project Dir: /home/kali/fabric-dev/fabric-samples/shard-experiment
+

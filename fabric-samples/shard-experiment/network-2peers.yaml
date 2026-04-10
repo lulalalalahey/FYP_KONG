@@ -1,0 +1,32 @@
+name: Caliper Test Network 2 Peers
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  - channelName: mychannel
+    contracts:
+      - id: ev-cc-shard
+    peers:
+      peer0.org1.example.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        eventSource: true
+      peer0.org2.example.com:
+        endorsingPeer: false
+        chaincodeQuery: true
+        eventSource: false
+
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: User1
+          clientPrivateKey:
+            path: "../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/3604140a0ec8770394b6b43e8233ac7b3638bc12ae83c6ac4c5f646fb5d370b0_sk"
+          clientSignedCert:
+            path: "../test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem"
+    connectionProfile:
+      path: "../test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml"
+      discover: false
